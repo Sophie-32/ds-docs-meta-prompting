@@ -51,6 +51,10 @@ This guide defines how documentation reads — the tone, word choices, sentence 
 
 <terminology>
 
+### Language
+
+Use US English spelling and vocabulary throughout all documentation. For example, write "color" not "colour", "customize" not "customise", "behavior" not "behaviour".
+
 ### Flagged words and phrases
 
 Some words and phrases should not appear in documentation. Some have a preferred replacement; others are strictly forbidden and require restructuring the sentence. The full machine-readable list is in @.claude/dockit/references/flagged-words.txt (in the same directory as this file).
