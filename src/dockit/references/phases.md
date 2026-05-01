@@ -30,24 +30,32 @@ User runs `/dockit:start` with no existing `.planning/STATE.md`.
 
 <activities>
 
-- Identify the name of the construct or concept
-- Identify the documentation type — reference @{AGENT_FOLDER}/dockit/references/documentation-types.md for the available types
-- Identify the tier — reference @{AGENT_FOLDER}/dockit/references/tiers.md for the available tiers
-- Gather existing specs, designs, or prior documentation — ask what the user wants to keep from any old documentation
-- Identify the primary consumers of this documentation (designers, developers, content writers)
-- If it is a **construct**:
-  - Understand key use cases — in what situations would this construct be used? What problems does it solve?
-  - Are there specific user groups served by this construct? What problems does it solve for them?
-- If it is a **concept**:
-  - How does it help people understand the design system or use it better?
-  - Of the primary consumers, what questions does this concept answer for them?
-- Ask whether the user has done benchmarking of other design systems:
-  - What did they learn? What do other design systems do well regarding this topic?
-  - Is there anything from the benchmarking they want to keep in mind when writing?
+**Open with context, not a checklist.**
+
+If the user has already provided meaningful context (e.g. "I want to write docs for a button"), acknowledge it and ask the single highest-value follow-up. Do not reset with a generic opener. If no context has been given, lead with one open question:
+
+> "Tell me what you're documenting and what you want this doc to help people understand or do."
+
+Then gather the information below through conversation — infer what you can from what the user shares, and only ask specifically for what is missing.
+
+**Must capture by end of Discovery:**
+
+- Name of the construct or concept
+- Documentation type — reference @{AGENT_FOLDER}/dockit/references/documentation-types.md; infer from context where possible
+- Tier — reference @{AGENT_FOLDER}/dockit/references/tiers.md; infer from context where possible
+- Primary consumers (designers, developers, content writers)
+- Existing specs, designs, or prior documentation the user wants to carry forward
+- Enough scope context to write a useful section checklist (key use cases for constructs; core question answered for concepts)
+
+Before leaving Discovery, confirm inferences explicitly. For example: "From what you shared, I think this is a Component in the Global tier, primarily for developers — is that right?"
+
+**Benchmarking (deferred):**
+
+Do not ask about benchmarking upfront. Revisit only if the user mentions prior research, if there is genuine uncertainty about conventions for this topic, or if gaps appear during drafting that outside examples could resolve.
 
 **Redundancy check loop:**
 
-After the user has answered all discovery questions, ask (with the `AskUserQuestion` tool if available) whether a `dockit-overlap-reviewer` agent should be spawned to check for overlap with existing documentation.
+Once the required discovery information has been gathered and confirmed, ask (with the `AskUserQuestion` tool if available) whether a `dockit-overlap-reviewer` agent should be spawned to check for overlap with existing documentation.
 
 - If the user agrees, spawn a `dockit-overlap-reviewer` agent with the discovery answers as context
 - The `dockit-overlap-reviewer` should distinguish between three outcomes:
@@ -66,7 +74,7 @@ After the user has answered all discovery questions, ask (with the `AskUserQuest
 </artifacts>
 
 <exit_criteria>
-The user has answered all discovery questions and confirmed the documentation type, tier, and audience. The redundancy check loop has been offered and — if accepted — has concluded with no remaining overlap, or the user has declined further review.
+The required discovery information has been gathered and confirmed (name, type, tier, audience, existing resources, scope context). The redundancy check loop has been offered and — if accepted — has concluded with no remaining overlap, or the user has declined further review.
 </exit_criteria>
 
 <transition>
