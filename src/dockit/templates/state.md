@@ -14,7 +14,7 @@ Phase values: `Discovery`, `Structure`, `In progress`, `Review`, `Complete`
 
 ### Discovery
 
-- **Primary consumers**: {designers, developers, content writers}
+- **Primary consumers**: designers
 - **Existing resources**: {links to specs, designs, prior docs, or "none"}
 - **Figma URL**: {figma URL, or "none"}
 

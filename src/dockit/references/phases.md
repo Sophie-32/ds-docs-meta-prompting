@@ -32,22 +32,23 @@ User runs `/dockit:start` with no existing `.planning/STATE.md`.
 
 **Open with context, not a checklist.**
 
-If the user has already provided meaningful context (e.g. "I want to write docs for a button"), acknowledge it and ask the single highest-value follow-up. Do not reset with a generic opener. If no context has been given, lead with one open question:
+If the user has already provided meaningful context (e.g. "I want to write docs for a button"), acknowledge it and ask the single highest-value follow-up. Do not reset with a generic opener or ask for information they have already given. If no context has been given at all, lead with one open question:
 
-> "Tell me what you're documenting and what you want this doc to help people understand or do."
+> "Tell me what you're documenting and what you want this doc to help designers understand or do."
 
 Then gather the information below through conversation — infer what you can from what the user shares, and only ask specifically for what is missing.
 
 **Must capture by end of Discovery:**
 
-- Name of the construct or concept
+- Name of the construct or concept — infer from the user's message; do not ask if they have already named it
 - Documentation type — reference @{AGENT_FOLDER}/dockit/references/documentation-types.md; infer from context where possible
 - Tier — reference @{AGENT_FOLDER}/dockit/references/tiers.md; infer from context where possible
-- Primary consumers (designers, developers, content writers)
 - Existing specs, designs, or prior documentation the user wants to carry forward
 - Enough scope context to write a useful section checklist (key use cases for constructs; core question answered for concepts)
 
-Before leaving Discovery, confirm inferences explicitly. For example: "From what you shared, I think this is a Component in the Global tier, primarily for developers — is that right?"
+**Primary consumers are always designers.** Do not ask about audience.
+
+Before leaving Discovery, confirm inferences explicitly. For example: "From what you shared, I think this is a Component in the Global tier — is that right?"
 
 **Benchmarking (deferred):**
 
