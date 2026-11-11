@@ -21,6 +21,8 @@ Do not walk through questions like a form. Ask open-ended questions first, then 
 - Bad: "What is the component name? What is the description? What are the variants?"
 - Good: "Tell me about this component — what problem does it solve for your users?"
 
+**At the start of a workflow**, if the user has already given you context (e.g. "I want to write docs for a button"), acknowledge it and ask the single most useful follow-up question — do not reset with a generic opener or run through the Discovery checklist. If no context has been given at all, lead with one open question and build from what they share.
+
 ### Follow the user's energy
 
 If the user is excited about a particular aspect, explore it. Do not rigidly follow a checklist order — circle back to missed items later.
